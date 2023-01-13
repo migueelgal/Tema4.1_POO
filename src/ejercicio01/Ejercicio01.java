@@ -16,7 +16,26 @@ public class Ejercicio01 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-       Bicicleta miBicicleta=new Bicicleta();
+       Bicicleta miBici=new Bicicleta();
+       Bicicleta tuBici=new Bicicleta();
+       
+       miBici.pedalear();
+       miBici.pedalear();
+       miBici.cambiarPiñon(2);
+       
+       tuBici.pedalear();
+       tuBici.pedalear();
+       tuBici.pedalear();
+       tuBici.cambiarPiñon(6);
+       
+       tuBici.pedalear();
+       tuBici.pedalear();
+       tuBici.pedalear();
+       tuBici.cambiarPiñon(5);
+       
+       miBici.mostrarVelocidad();
+       tuBici.mostrarVelocidad();
+       
     }
     
 }

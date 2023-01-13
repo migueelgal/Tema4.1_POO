@@ -59,5 +59,24 @@ public class Bicicleta {
             System.out.println("ERROR. Piñón incorrecto");
         }
     }
+    public void mostrarVelocidad(){
+        switch(this.piñonActual){
+            case 1:
+                System.out.println("Velocidad actual: "+(this.revoluciones*2));
+                break;
+
+            case 2:
+                System.out.println("Velocidad actual: "+(this.revoluciones*1.5));
+                break;
+            case 3:
+                System.out.println("Velocidad actual: "+(this.revoluciones*1));
+                break;
+            case 4:
+                System.out.println("Velocidad actual: "+(this.revoluciones*0.5));
+                break;
+            case 5:
+                System.out.println("Velocidad actual: "+(this.revoluciones*0.3));
+        }
+    }
     
 }
