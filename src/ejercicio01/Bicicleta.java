@@ -11,13 +11,12 @@ package ejercicio01;
 public class Bicicleta {
     private double revoluciones;
     private int piñonActual;
-    
-    public Bicicleta(){
-    
-}
-    public Bicicleta(double revoluciones, int piñonActual){
+    private final String propietario;
+
+    public Bicicleta(String propietario){
         this.revoluciones=0;
         this.piñonActual=3;
+        this.propietario=propietario;
     }
 
     public double getRevoluciones() {
@@ -35,6 +34,12 @@ public class Bicicleta {
     public void setPiñonActual(int piñonActual) {
         this.piñonActual = piñonActual;
     }
+
+    public String getPropietario() {
+        return this.propietario;
+    }
+    
+
     
     //********* METODOS ********
     public void pedalear(){
@@ -59,24 +64,54 @@ public class Bicicleta {
             System.out.println("ERROR. Piñón incorrecto");
         }
     }
-    public void mostrarVelocidad(){
-        switch(this.piñonActual){
+//    public void mostrarVelocidad(){
+//        System.out.print("Bici de: "+this.propietario+" --> ");
+//        switch(this.piñonActual){
+//            
+//            case 1:
+//                System.out.println("Velocidad actual: "+(this.revoluciones*2));
+//                break;
+//
+//            case 2:
+//                System.out.println("Velocidad actual: "+(this.revoluciones*1.5));
+//                break;
+//            case 3:
+//                System.out.println("Velocidad actual: "+(this.revoluciones*1));
+//                break;
+//            case 4:
+//                System.out.println("Velocidad actual: "+(this.revoluciones*0.5));
+//                break;
+//            case 5:
+//                System.out.println("Velocidad actual: "+(this.revoluciones*0.3));
+//        }
+//    }
+    
+    public double obtenerVelocidad(){
+            double velocidad=0;
+        
+            switch(this.piñonActual){
+            
             case 1:
-                System.out.println("Velocidad actual: "+(this.revoluciones*2));
+                velocidad=this.revoluciones*2;
                 break;
 
             case 2:
-                System.out.println("Velocidad actual: "+(this.revoluciones*1.5));
+                velocidad=this.revoluciones*1.5;
                 break;
             case 3:
-                System.out.println("Velocidad actual: "+(this.revoluciones*1));
+                velocidad=this.revoluciones*1;
                 break;
             case 4:
-                System.out.println("Velocidad actual: "+(this.revoluciones*0.5));
+                velocidad=this.revoluciones*0.5;
                 break;
             case 5:
-                System.out.println("Velocidad actual: "+(this.revoluciones*0.3));
-        }
+                velocidad=this.revoluciones*0.3;
+                break;
     }
+            return velocidad;
+
+                
+    }
+            
     
 }

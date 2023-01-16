@@ -14,10 +14,13 @@ public class Ejercicio01 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
         // TODO code application logic here
         
-       Bicicleta miBici=new Bicicleta();
-       Bicicleta tuBici=new Bicicleta();
+
+       Bicicleta miBici=new Bicicleta("Juan");
+       Bicicleta tuBici=new Bicicleta("Alicia");
+
        
        miBici.pedalear();
        miBici.pedalear();
@@ -33,8 +36,8 @@ public class Ejercicio01 {
        tuBici.pedalear();
        tuBici.cambiarPiñon(5);
        
-       miBici.mostrarVelocidad();
-       tuBici.mostrarVelocidad();
+       miBici.obtenerVelocidad();
+       System.out.println("Velocidad actual: "+miBici.obtenerVelocidad());
        
     }
     
