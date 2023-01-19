@@ -43,6 +43,32 @@ public class Libro {
     }
 
     public void setIsbn(String isbn) {
+        
+        isbn=isbn.toUpperCase();
+        
+        boolean isbnCorrecto=true;
+        
+        //Comprobacion1: Compruebo que el isbn tiene formato correcto
+        if (isbn.length()!=4)isbnCorrecto=false;
+        
+        //Comprobacion2: que el primer caracter sea una letra
+        char letra=isbn.charAt(0);
+        if(letra<'A' ||letra>'Z'){
+            isbnCorrecto=false;
+        }
+        
+        //Comprobacion3,4,5: que los siguientes caracteres sean numeros
+        char digito1=isbn.charAt(1);
+        if(digito1 <'0' || digito1>'9') isbnCorrecto=false;
+        char digito2=isbn.charAt(2);
+        if(digito2 <'0' || digito2>'9') isbnCorrecto=false;
+        char digito3=isbn.charAt(3);
+        if(digito3 <'0' || digito3>'9') isbnCorrecto=false;
+        
+        if(isbnCorrecto==false){
+            System.out.println("ERROR. ISBN incorrecto");
+        }
+        
         this.isbn = isbn;
     }
 
